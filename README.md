@@ -6,15 +6,15 @@ In the following file I will explain the implementantion of every function and
 the way I thought while writing this program. I will explain the implementantion
 of the functions respecting the order they are declared in the header file.
 
-**createDictionary
+**createDictionary**
 
--> This function allocs memory for an element of type Dictionary.
--> After allocating the dictionary, I filled the camp N with the given parameter.
--> Also, I allocate memory for N lists, the lists that will be used by the
+* This function allocs memory for an element of type Dictionary.
+* After allocating the dictionary, I filled the camp N with the given parameter.
+* Also, I allocate memory for N lists, the lists that will be used by the
    dictionary.
--> The function returns the dictionary allocated.
+* The function returns the dictionary allocated.
 
-**addElement
+**addElement**
 
 -> This function must insert into the dictionary an new element given a key, a
    value and a frequency.
@@ -55,7 +55,7 @@ of the functions respecting the order they are declared in the header file.
 -> I check if the total number of elements exceeds 2N. If so, I delete the last
    element of each list by calling the function deleteLastElement in a for loop.
 
-**removeElement
+**removeElement**
 
 -> This function must remove the element with the given key and value from the
    dictionary.
@@ -81,7 +81,7 @@ of the functions respecting the order they are declared in the header file.
    since I am working with a circular list. In this case I must simply
    link the previous node to the next and viceversa and then free my node.
 
-**printDictionary
+**printDictionary**
 
 -> This functions prints the dictionary by printing the elements of all its
    lists.
@@ -96,7 +96,7 @@ of the functions respecting the order they are declared in the header file.
    I couldn't print all the elements in the loop since the list is circular and
    I wouldn't have a condition to stop.
 
-**get
+**get**
 
 -> This function must return a non-circular double-linked list of all the 
    elements from the dictionary containing the given key.
@@ -125,7 +125,7 @@ of the functions respecting the order they are declared in the header file.
    it at the correct position, keeping the list sorted.
 -> The function returns the list containing all the elements with the given key.
 
-**printValue
+**printValue**
 
 -> This functions prints all the elements from the dictionary with the given
    value.
@@ -138,7 +138,7 @@ of the functions respecting the order they are declared in the header file.
 -> If the list is not empty, I parse the list by checking for the given value
    and printing the elements that contain that value.
 
-**printFrequency
+**printFrequency**
 
 -> This functions prints all the elements from the dictionary with the given
    frequency.
@@ -151,7 +151,7 @@ of the functions respecting the order they are declared in the header file.
 -> If the list is not empty, I parse the list by checking for the given
    frequency and printing the elements that contain that frequency.
 
-**unionValues
+**unionValues**
 
 -> This function creates a non-circular double-linked list containing all the
    elements from the dictionary with the given value.
@@ -165,7 +165,7 @@ of the functions respecting the order they are declared in the header file.
 -> The function returns a list of all the elements from the dictionary with the
    given value.
 
-**unionMaxFrequencies
+**unionMaxFrequencies**
 
 -> This function creates a non-circular double-linked list containing all the
    elements from the dictionary with the maximum frequency of each list.
@@ -180,7 +180,7 @@ of the functions respecting the order they are declared in the header file.
 -> The function returns a list of all the elements from the dictionary with the
    maximum frequencies.
 
-**reverseLists
+**reverseLists**
 
 -> This functions creates a new dictionary which contains the same elements
    from the given dictionary, but with the elements of the lists in reversed
@@ -201,7 +201,7 @@ of the functions respecting the order they are declared in the header file.
 -> Then for each list, I link the new dictionary with the head of the new lists.
 -> The function returns a new dictionary with the elements of its lists reversed.
 
-**printList
+**printList**
 
 -> This function prints the elements of non-circular double-linked list.
 -> In my implementantion, first of all I check if the list is empty, in which
@@ -209,7 +209,7 @@ of the functions respecting the order they are declared in the header file.
 -> If the list has some elements, I parse it until its end while printing each
    element.
 
-**freeDictionary
+**freeDictionary**
 
 -> This function frees the dictionary by deallocating all the memory it used.
 -> First of all, if the dictionary is empty, I have no memory to free and I
@@ -224,7 +224,7 @@ of the functions respecting the order they are declared in the header file.
 -> After freeing all the elements from all the lists I will finally free the
    lists and the dictionary itself.
 
-**freeList
+**freeList**
 
 -> This function frees a non-circular double-linked list by deallocating all
    the memory it used.
@@ -233,12 +233,12 @@ of the functions respecting the order they are declared in the header file.
 -> If the list has at least one element, we parse it and we free it node by
    node.
 
-**isEmpty
+**isEmpty**
 
 -> This function checks if a list is empty.
 -> The function returns 1 if the list is empty and 0 if it isn't.
 
-**length
+**length**
 
 -> This function calculates the length of a circular list.
 -> If the list is empty, the function will return 0.
@@ -246,7 +246,7 @@ of the functions respecting the order they are declared in the header file.
    list by parsing it.
 -> The function returns the length of the list.
 
-**getNrTotalElements
+**getNrTotalElements**
 
 -> This function calculates the total number of elements from the dictionary.
 -> If the dictionary is empty, the function will return 0.
@@ -255,7 +255,7 @@ of the functions respecting the order they are declared in the header file.
    list from the dictionary.
 -> The function returns the total number of elements of a dictionary.
 
-**testStrings
+**testStrings**
 
 -> This function determines which one of the two given strings is bigger
    alphabetically.
@@ -276,7 +276,7 @@ of the functions respecting the order they are declared in the header file.
 -> The function returns 1 if the first string is bigger alphabetically, -1 for
    the second string and 0 if the strings are equal.
 
-**containsKeyValue
+**containsKeyValue**
 
 -> This function checks if a list contains an element with the given key and
    value.
@@ -289,7 +289,7 @@ of the functions respecting the order they are declared in the header file.
 -> The function returns the element from the list with given key and value or
    NULL if there is no such element in the list.
 
-**insertNewElement
+**insertNewElement**
 
 -> This function inserts a new element in a list by keeping it sorted by the
    three criteria given.
@@ -319,7 +319,7 @@ of the functions respecting the order they are declared in the header file.
    for which we must verify the same conditions declared above.
 -> The function returns the list after the insertion.
 
-**deleteLastElement
+**deleteLastElement**
 
 -> This function deletes the last of a list.
 -> If the list is empty, I have no element to delete, so I simply return NULL.
@@ -328,7 +328,7 @@ of the functions respecting the order they are declared in the header file.
    to the previous element of the one to be deleted and then I delete it.
 -> The function returns the list without the last element.
 
-**findList
+**findList**
 
 -> This function calculates the index of the list for a given key.
 -> I parse the string of the key and I sum the ASCII codes. The list index will
@@ -336,7 +336,7 @@ of the functions respecting the order they are declared in the header file.
 -> The function returns the index of the list where the given key must be
    situated.
 
-**containsKey
+**containsKey**
 
 -> This function checks if a dictionary contains the given key.
 -> I parse the dictionary and I check every list's elements for the given key.
@@ -344,7 +344,7 @@ of the functions respecting the order they are declared in the header file.
    the list which contains the given key.
 -> If no such element is found, the function returns -1.
 
-**insertAtEndValues
+**insertAtEndValues**
 
 -> This function inserts the elements with a given value from a list into a new
    list.
@@ -363,7 +363,7 @@ of the functions respecting the order they are declared in the header file.
 -> The function returns the new list updated with all the elements from the
    old list having the given value.
 
-**insertAtEndMaxFrequencies
+**insertAtEndMaxFrequencies**
 
 -> This function inserts the elements with the maximum frequency from a list
    into a new list.
